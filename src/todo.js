@@ -46,8 +46,8 @@ const todoApp = combineReducers({ todos, visibilityFilter });
 
 const store = createStore(todoApp);
 
-function todo() {
+const todo = () => {
   return <div></div>;
-}
+};
 
-export default 
+export default todo;
