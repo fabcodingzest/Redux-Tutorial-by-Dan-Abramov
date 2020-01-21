@@ -5,7 +5,7 @@ import { getData } from "../actions/Index";
 const Posts = props => {
   useEffect(() => {
     props.getData();
-  }, []);
+  }, [props]);
   return (
     <ul>
       {props.articles.map(el => (
