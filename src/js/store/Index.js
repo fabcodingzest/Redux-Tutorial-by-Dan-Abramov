@@ -17,4 +17,5 @@ const store = createStore(
 );
 
 initialiseSagaMiddleware.run(apiSaga);
+
 export default store;

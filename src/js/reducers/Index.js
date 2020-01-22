@@ -13,20 +13,18 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_ARTICLE:
-      // console.log(action.payload);
       return Object.assign({}, state, {
         articles: state.articles.concat(action.payload)
       });
     case FOUND_BAD_WORD:
-      // console.log(action.payload);
-      alert(`It includes bad word, try again`);
+      alert(`It includes bad word "${action.payload}", try again`);
       return state;
     case DATA_LOADED:
       return Object.assign({}, state, {
         remoteArticles: state.remoteArticles.concat(action.payload)
       });
     case API_ERROR:
-      alert(action.payload);
+      console.log(action.payload);
       return state;
     default:
       return state;

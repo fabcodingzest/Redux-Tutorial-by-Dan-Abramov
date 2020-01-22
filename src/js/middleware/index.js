@@ -10,7 +10,7 @@ function forbiddenWordsMiddleware({ dispatch }) {
           action.payload.title.includes(word)
         );
         if (foundWord.length) {
-          return dispatch({ type: "FOUND_BAD_WORD" });
+          return dispatch({ type: "FOUND_BAD_WORD", payload: foundWord });
         }
       }
       return next(action);
